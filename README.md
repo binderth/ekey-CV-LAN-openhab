@@ -25,6 +25,6 @@ CV LAN variables:
 after that, you're good to go, with the JSON of the fingerprint sensor in your item.
 
 # notes
-* You *MUST* configure MULTI as protocol right now, as I use that over HOME. RARE is way more complex, but MULTI will give you all you need in my opinion
+* You **MUST** configure MULTI as protocol right now, as I use that over HOME. RARE is way more complex, but MULTI will give you all you need in my opinion
 * This is for the REST API without any restrictions as introduced in openHAB3, perhaps later on, I'll update to allow for a credentials restricted API access.
 * this comes "as is", no warranties
