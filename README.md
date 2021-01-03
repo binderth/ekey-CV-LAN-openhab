@@ -5,6 +5,7 @@ an alternative way to import Ekey fingerprint to openHAB (openHAB2, openHAB3)
 # prerequisites
 * Ekey fingerprint sensor
 * Ekey CV LAN 
+* openHAB3 recommended, REST-calls also available with openHAB2 (http://openhab.org)
 first of all, you have to configure your Ekey CV LAN via ekey_home_converter_LAN_config.exe (find it at https://www.ekey.net/downloadcenter/) to use your IP-addresses and be sure to configure the UDP-Calls like this:
 * configure the UDP-port
 * configure the IP-address of the recipient (the server you're running ekeylistener.py on!)
