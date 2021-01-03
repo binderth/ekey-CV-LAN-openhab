@@ -1,0 +1,25 @@
+triggers:
+  - id: "2"
+    configuration:
+      itemName: ekey_JSON
+    type: core.ItemCommandTrigger
+conditions: []
+actions:
+  - inputs: {}
+    id: "1"
+    configuration:
+      type: application/javascript
+      script: |
+        var ekey = JSON.parse(items["ekey_JSON"]);              # parses the JSON-payload of the item 
+        events.sendCommand("EkeyUserstatus", ekey.userstatus);  # the above update all items from the JSON-payload /MULTI
+        events.sendCommand("EkeyUsername", ekey.username);
+        events.sendCommand("EkeyUserid", ekey.userid);
+        events.sendCommand("EkeyNamefs", ekey.namefs);
+        events.sendCommand("EkeySerialfs", ekey.serialfs);
+        events.sendCommand("EkeyLastaction", ekey.timestamp);
+        events.sendCommand("EkeyKeyid", ekey.keyid);
+        events.sendCommand("EkeyPackettype", ekey.packettype);
+        events.sendCommand("EkeyInputid", ekey.inputid);
+        events.sendCommand("EkeyFingerid", ekey.fingerid);
+        events.sendCommand("EkeyAction", ekey.action);
+    type: script.ScriptAction
